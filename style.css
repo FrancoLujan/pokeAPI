@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+body {
+  background-image: url("imagenes/fondo.png");
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.caja {
+  background-color: rgba(218, 249, 0, 0.2);
+  backdrop-filter: blur(1px);
+  display: flex;
+  padding: 2px;
+
+  height: 400px;
+  width: 800px;
+  justify-content: space-between;
+
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 12px;
+}
+
+.cajaBuscador {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 0px;
+  margin: 10px;
+  
+}
+
+.cajaBuscador form {
+  height: 35%;
+
+  max-width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+ 
+}
+
+#buscador {
+  width: 250%;
+  height: 30px;
+  text-align: center;
+  font-size: 2rem;
+  outline: none;
+  background-color: transparent;
+  
+  border: none;
+  box-shadow: 2.5px 3px 1px ;
+  border: 0.2px solid ;
+}
+#buscador:focus{
+    backdrop-filter: blur(.2px);
+    box-shadow: none ;
+    transition: .4s box-shadow;
+}
+
+#botonBuscar {
+  width: 170px;
+  height: 30px;
+  border-style: none;
+  border-radius: 22px;
+  background-color: rgba(255, 255, 255, 0.452);
+  backdrop-filter: blur(21px);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.cajaCarta {
+  width: 60%;
+  margin: 10px;
+ 
+}
+
+#cajaImagen {
+  width: 100%;
+
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+#cajaImagen img {
+  height: 80%;
+}
+#habilidades {
+  width: 100%;
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#habilidades p {
+  margin: 5px;
+  font-size: 1.6rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media (max-width: 800px) {
+  .caja {
+    flex-direction: column;
+
+    height: 95vh;
+    width: 70vh;
+    margin: auto;
+  }
+  .cajaBuscador {
+    height: 50%;
+    width: 100%;
+    border: none;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 0px;
+  }
+  #buscador {
+   margin: 15px 0px; 
+  }
+
+  .cajaCarta {
+    height: 60%;
+    width: 100%;
+  }
+  #habilidades {
+    width: 100%;
+    margin: auto;
+    display: flex;
+   
+
+  }
+}
