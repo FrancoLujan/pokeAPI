@@ -6,7 +6,7 @@ const imagenPokemon = document.querySelector("#cajaImagen img");
 async function BuscarPokemon(Pokemon) {
   let sombraAnterior = pokemon.style.boxShadow;
   try {
-    let promesa = await fetch(`https://pokeapi.co/api/v2/pokemon/${Pokemon}`);
+    let promesa = await fetch(`https://pokeapi.co/api/v2/pokemon/${Pokemon.toLowerCase()}`);
     let resolucion = await promesa.json();
 
     imagenPokemon.setAttribute("src", resolucion.sprites["front_default"]);
@@ -14,11 +14,11 @@ async function BuscarPokemon(Pokemon) {
     
     let listaHabilidades = resolucion["abilities"];
 
-    listaHabilidades.forEach((poder) => {
-      habilidades.innerHTML += `<p>Habilidad: <strong>${poder.ability.name}</strong></p>`;
+    listaHabilidades.forEach((poder, i) => {
+      habilidades.innerHTML += `<p>Habilidad ${i}: <strong>${poder.ability.name}</strong></p>`;
     });
     let tipo = resolucion["types"];
-    habilidades.innerHTML += `<p>experiencia: <strong>${resolucion["base_experience"]}</strong> </p>\
+    habilidades.innerHTML += `<p>Experiencia: <strong>${resolucion["base_experience"]}</strong> </p>\
     <p>Altura: <strong>${resolucion["height"]}</strong></p>\
     <p>Peso: <strong>${resolucion["weight"]} </strong>\
     <p>Tipo: <strong>${tipo[0].type.name}</strong></p>`;

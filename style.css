@@ -108,16 +108,20 @@ body {
 }
 
 @media (max-width: 800px) {
+  html{
+    scroll-behavior: smooth;
+  }
   .caja {
     flex-direction: column;
-
-    height: 95vh;
-    width: 70vh;
-    margin: auto;
+    
+    height: 100vh;
+    width: 100%;
+    margin: 0px;
+    border-radius: 0;
   }
   .cajaBuscador {
     height: 50%;
-    width: 100%;
+    width: 98%;
     border: none;
     
     display: flex;
@@ -132,11 +136,12 @@ body {
 
   .cajaCarta {
     height: 60%;
-    width: 100%;
+    width: 98%;
+
   }
   #habilidades {
-    width: 100%;
-    margin: auto;
+    width: 98%;
+    
     display: flex;
    
 
