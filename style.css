@@ -12,7 +12,7 @@ body {
 }
 .caja {
   background-color: rgba(218, 249, 0, 0.2);
-  backdrop-filter: blur(1px);
+  backdrop-filter: blur(2px);
   display: flex;
   padding: 2px;
 
