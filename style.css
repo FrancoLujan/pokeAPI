@@ -9,6 +9,10 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
  
 }
 .caja {
@@ -21,8 +25,7 @@ body {
   width: 800px;
   justify-content: space-between;
 
-  margin: auto;
-  margin-top: 100px;
+  
   border-radius: 12px;
 }
 
