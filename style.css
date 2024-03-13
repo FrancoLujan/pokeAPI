@@ -3,15 +3,16 @@
   margin: 0px;
 }
 body {
-  background-image: url("imagenes/fondo.webp");
+  background-image: url("imagenes/fondo_11zon.webp");
   
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+ 
 }
 .caja {
-  background-color: rgba(218, 249, 0, 0.2);
+  background-color: rgba(218, 249, 0, 0.25);
   backdrop-filter: blur(2px);
   display: flex;
   padding: 2px;
@@ -50,6 +51,7 @@ body {
 #buscador {
   width: 250%;
   height: 30px;
+  padding: 5px 0px;
   text-align: center;
   font-size: 2rem;
   outline: none;
@@ -58,11 +60,11 @@ body {
   border: none;
   box-shadow: 2.5px 3px 1px ;
   border: 0.2px solid ;
+  transition: .8s box-shadow;
 }
 #buscador:focus{
     backdrop-filter: blur(.2px);
     box-shadow: none ;
-    transition: .4s box-shadow;
 }
 
 #botonBuscar {
@@ -79,6 +81,10 @@ body {
 .cajaCarta {
   width: 60%;
   margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
  
 }
 
@@ -105,6 +111,24 @@ body {
   margin: 5px;
   font-size: 1.6rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.spinner{
+  width: 100px;
+  height: 100px;
+  background-color:transparent;
+  border-radius:50%;
+  border: 5px solid transparent;
+  border-bottom: 5px solid gainsboro;
+  animation: giros  2s linear infinite
+}
+@keyframes giros{
+  from{
+      transform: rotate(0deg);
+  }
+  to{
+      transform: rotate(360deg);
+  }
 }
 
 @media (max-width: 800px) {
